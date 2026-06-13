@@ -98,3 +98,11 @@ mkdocs serve
 ```powershell
 mkdocs build
 ```
+## 部署網站到 GitHub
+```
+git add .
+git commit -m "Update docs"
+git push
+mkdocs gh-deploy
+```
+https://weberhwang.github.io/weber-ai-project/
