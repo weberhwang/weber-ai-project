@@ -63,6 +63,36 @@
   font-weight: 400;
 }
 
+.md-typeset p {
+  line-height: 1.4;
+  margin: 0.3em 0;
+}
+
+.md-typeset ul,
+.md-typeset ol {
+  margin-top: 0.25em;
+  margin-bottom: 0.55em;
+}
+
+.md-typeset ul li,
+.md-typeset ol li {
+  line-height: 1.28;
+  margin-bottom: 0.04em;
+}
+
+.md-typeset ul li + li,
+.md-typeset ol li + li {
+  margin-top: 0.2em;
+}
+
+.md-typeset li > p,
+.md-typeset li > p:first-child,
+.md-typeset li > p:last-child {
+  line-height: 1.28;
+  margin-top: 0.08em;
+  margin-bottom: 0.08em;
+}
+
 .md-typeset code,
 .md-typeset pre {
   border-radius: 0;
