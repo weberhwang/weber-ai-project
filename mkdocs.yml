@@ -1,0 +1,58 @@
+site_name: Weber AI Project
+site_description: Weber AI Project knowledge base
+site_author: Weber
+
+theme:
+  name: material
+  font:
+    text: JetBrains Mono
+    code: JetBrains Mono
+  language: zh-TW
+  icon:
+    logo: material/book-open-variant
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: lime
+      toggle:
+        icon: material/brightness-4
+        name: 切換亮色模式
+    - scheme: default
+      primary: indigo
+      accent: lime
+      toggle:
+        icon: material/brightness-7
+        name: 切換暗色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首頁: index.md
+  - 網站架構:
+      - 簡介: mkdocs-web/index.md
+      - 入門筆記: mkdocs-web/getting-started.md
+  - 遊戲:
+      - Diablo 4:
+          - 簡介: diablo4/index.md
+          - 符文: diablo4/runes.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
