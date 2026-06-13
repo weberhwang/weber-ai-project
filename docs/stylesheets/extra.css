@@ -4,6 +4,8 @@
   --md-primary-fg-color--light: #4a56aa;
   --md-primary-fg-color--dark: #2b3478;
   --md-accent-fg-color: #b6ff00;
+  --weber-sidebar-bg: #202828;
+  --weber-sidebar-title-bg: #323c3c;
 }
 
 [data-md-color-scheme="slate"] {
@@ -38,6 +40,27 @@
 
 .md-main {
   background: var(--md-default-bg-color);
+}
+
+.md-sidebar--primary,
+.md-sidebar--secondary,
+.md-sidebar--primary .md-sidebar__inner,
+.md-sidebar--secondary .md-sidebar__inner,
+.md-sidebar--primary .md-sidebar__scrollwrap,
+.md-sidebar--secondary .md-sidebar__scrollwrap,
+.md-sidebar--primary .md-nav,
+.md-sidebar--secondary .md-nav,
+.md-sidebar--primary .md-nav__title,
+.md-sidebar--secondary .md-nav__title {
+  background: var(--weber-sidebar-bg);
+  box-shadow: none;
+}
+
+.md-sidebar--primary,
+.md-sidebar--secondary,
+.md-sidebar--primary .md-sidebar__inner,
+.md-sidebar--secondary .md-sidebar__inner {
+  min-height: calc(100vh - 5.6rem);
 }
 
 .md-grid {
@@ -99,16 +122,66 @@
 }
 
 @media screen and (min-width: 76.25em) {
+  .md-sidebar--primary::before,
+  .md-sidebar--secondary::before {
+    position: fixed;
+    top: 5.6rem;
+    bottom: 0;
+    z-index: -1;
+    width: inherit;
+    background: var(--weber-sidebar-bg);
+    content: "";
+  }
+
+  .md-sidebar--primary::before {
+    left: 0;
+  }
+
+  .md-sidebar--secondary::before {
+    right: 0;
+  }
+
+  .md-sidebar--primary,
+  .md-sidebar--secondary,
+  .md-sidebar--primary .md-sidebar__inner,
+  .md-sidebar--secondary .md-sidebar__inner,
+  .md-sidebar--primary .md-sidebar__scrollwrap,
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    min-height: calc(100vh - 5.6rem);
+  }
+
   .md-sidebar--primary {
     width: 13rem;
   }
 
   .md-sidebar--primary .md-sidebar__scrollwrap {
-    margin-top: 3rem;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .md-sidebar--primary .md-nav__title {
     display: none;
+  }
+
+  .md-sidebar--primary
+    > .md-sidebar__scrollwrap
+    > .md-sidebar__inner
+    > .md-nav
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link {
+    position: relative;
+    min-height: 2.4rem;
+    padding: 0 0.7rem;
+    background: var(--weber-sidebar-title-bg);
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--weber-sidebar-title-bg), var(--weber-sidebar-title-bg)) padding-box,
+      linear-gradient(90deg, #b6ff00, #73a7ff) border-box;
+    box-shadow: 0 0.2rem 0.8rem rgb(0 0 0 / 0.22);
+    display: flex;
+    align-items: center;
+    color: var(--md-default-fg-color);
   }
 
   .md-sidebar--primary .md-nav__link {

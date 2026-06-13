@@ -36,7 +36,8 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - 首頁: index.md
+  - 首頁:
+      - 總覽: index.md
   - 網站架構:
       - 簡介: mkdocs-web/index.md
       - 入門筆記: mkdocs-web/getting-started.md
