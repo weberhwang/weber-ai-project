@@ -47,6 +47,7 @@ nav:
           - 符文: diablo4/runes.md
           - 機制: diablo4/mechanics.md
           - 攻略: diablo4/tips.md
+          - 術士-技能: diablo4/warlock-skills.md
 
 markdown_extensions:
   - admonition
