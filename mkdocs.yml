@@ -45,6 +45,8 @@ nav:
       - Diablo 4:
           - 簡介: diablo4/index.md
           - 符文: diablo4/runes.md
+          - 機制: diablo4/mechanics.md
+          - 攻略: diablo4/tips.md
 
 markdown_extensions:
   - admonition
